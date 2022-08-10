@@ -1,0 +1,35 @@
+<!--pages/newP/newP.wxml-->
+<view style="width: 95%; margin: auto;">
+<van-toast id="van-toast" />
+  <view class="txtL">｜更新商品</view>
+  <view class="innerbox">更新类型:
+    <radio-group>
+      <radio data-id="0" class="button_r" bindtap="choose">新增商品</radio>
+      <radio data-id="1" class="button_r" bindtap="choose">新增种类</radio>
+    </radio-group>
+  </view>
+  <view wx:if="{{type == 0}}">
+    <form bindsubmit="submit" data-id="0">
+      <view class="title">扫描商品条码：</view>
+      <input name="barcode" class="ipt" value="{{barcode}}" disabled="true" style="background-color: rgb(243, 243, 243);"/>
+      <view class="ipt" style="width: 200rpx;height: 60rpx;line-height: 60rpx; text-align: center;" bindtap="scan">点击扫描</view>
+      <view class="title">商品名：</view>
+      <input class="ipt" name="pname" />
+      <view class="title">商品类别：</view>
+      <radio-group name="type">
+        <radio wx:for="{{ptype}}" value="{{item.tid}}" class="button_r">{{item.tname}}
+        </radio>
+      </radio-group>
+      <button type="primary" style="margin: 40rpx auto;" form-type="submit">提交</button>
+    </form>
+  </view>
+  <view wx:if="{{type == 1}}">
+    <form bindsubmit="submit" data-id="1">
+      <view class="title">类别名：</view>
+      <input name="typename" class="ipt" />
+      <button type="primary" style="margin: 40rpx auto;" form-type="submit">提交</button>
+    </form>
+  </view>
+</view>
+
+

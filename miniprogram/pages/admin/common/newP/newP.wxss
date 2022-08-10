@@ -1,0 +1,29 @@
+/* pages/newP/newP.wxss */
+.innerbox{
+  font-size: 35rpx;
+  height: 80rpx;
+  width: 85%;
+  line-height: 16rpx;
+  padding: 40rpx;
+  border-bottom: 2rpx solid #d8d8d8;
+  margin: 0 auto;
+}
+
+.button_r{
+  font-size: 30rpx;
+  margin-top: 40rpx;
+  margin-left: 30rpx;
+}
+
+.title{
+  text-indent: 1em;
+  margin-top: 30rpx;
+}
+
+.ipt{
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+  width: 300rpx;
+  border: 1rpx solid gray;
+  border-radius: 5rpx;
+}

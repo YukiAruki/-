@@ -1,0 +1,28 @@
+/* pages/detail/detail.wxss */
+.box{
+  height: 940rpx;
+  width: 100%;
+  border-top: 30rpx solid #8bb171;
+  border-bottom:5rpx solid #cfc3af;
+  background-color: #f7efe2;
+  margin: 20rpx auto;
+  color: #184c46;
+}
+
+.numbox{
+  height: 480rpx;
+  border-bottom: 1px solid #92b57a;
+}
+
+.num{
+  font-size: 40px;
+  text-align: center;
+  line-height: 40px;
+  padding: 90px 0 90px 0;
+}
+
+.txt{
+  text-align: center;
+  line-height: 40px;
+  padding: 5px;
+}

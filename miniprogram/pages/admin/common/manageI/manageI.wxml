@@ -1,0 +1,8 @@
+<!--manageI 库存管理中转-->
+<view style="width: 95%; margin: auto;">
+  <view class="txtL">｜库存管理</view>
+  <van-cell-group>
+    <van-cell title="更新库存" size="large" link-type="redirectTo" url="../../../public/chooseL/chooseL?typ=3"></van-cell>
+    <van-cell title="新增商品/种类" size="large" link-type="redirectTo" url="../newP/newP"></van-cell>
+  </van-cell-group>
+</view>

@@ -1,0 +1,12 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <view class="mar"></view>
+  <view class="box">
+    <view class="numbox"><view class="num">{{oid}}</view></view>
+    <view class="halfmar"></view>
+    <view class="txt">地址：{{lname}}</view>
+    <view class="txt">套餐：{{cname}}</view>
+    <view class="txt">{{time}}</view>
+    <view class="txt">请于18:00之前前往领取</view>
+  </view>
+</view>

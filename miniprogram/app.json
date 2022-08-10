@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/me/me",
+    "pages/about/about",
+    "pages/public/chooseL/chooseL",
+    "pages/shop/chooseT/chooseT",
+    "pages/shop/detail/detail",
+    "pages/shop/dictionary/dictonary",
+    "pages/logs/logs",
+    "pages/user/order/order",
+    "pages/admin/common/manageI/manageI",
+    "pages/admin/common/manageO/manageO",
+    "pages/admin/common/update/update",
+    "pages/admin/common/newP/newP",
+    "pages/admin/rt/keyList/keyList",
+    "pages/admin/rt/adminList/adminList",
+    "pages/user/joinIn/joinIn"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "無餘",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath":"pages/index/index",
+        "text":"首页",
+        "iconPath": "/images/boxoff.png",
+        "selectedIconPath": "/images/boxon.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text":"我",
+        "iconPath": "/images/me.png",
+        "selectedIconPath": "/images/me_hover.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于我们",
+        "iconPath": "/images/mark-o.png",
+        "selectedIconPath": "/images/mark.png"
+      }
+    ],
+    "color": "#000000",
+    "selectedColor": "#184c46"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "weui" : true
+  },
+  "usingComponents": {
+    "van-cell": "./miniprogram_npm/vant-weapp/cell/index",
+    "van-cell-group": "./miniprogram_npm/vant-weapp/cell-group/index",
+    "van-button": "./miniprogram_npm/vant-weapp/button/index",
+    "van-field":"./miniprogram_npm/vant-weapp/field/index",
+    "van-toast":"./miniprogram_npm/vant-weapp/toast/index"
+  }
+}

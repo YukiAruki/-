@@ -1,0 +1,14 @@
+<!--pages/adminList/adminList.wxml-->
+<view class="txtL"> | 管理员名单</view>
+<van-toast id="van-toast" />
+<van-cell-group>
+  <van-cell wx:for="{{adminList}}" wx:key="{{item.nickName}}">
+    <view slot="title">
+      <image style="width: 100rpx;height: 100rpx; float: left;" src="{{item.avatarUrl}}" />
+      <view>{{item.nickName}}</view>
+    </view>
+    <view slot="right-icon">
+      <van-button bindtap="deleteAdmin" data-openid="{{item.openid}}">移除管理员</van-button>
+    </view>
+  </van-cell>
+</van-cell-group>

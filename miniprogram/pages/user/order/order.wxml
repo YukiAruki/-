@@ -1,0 +1,10 @@
+<view class="container">
+  <view wx:if="{{haveorder == true}}" class="choice" wx:for="{{orders}}" data-oid="{{item.oid}}" bindtap="toDetail">
+    <view class="txtL">{{item.oid_form}}　{{item.lname}}  {{item.proc}}</view>
+    <view class="txtM">{{item.date}}</view>
+  </view>
+  <view class="choice" wx:if="{{haveorder == false}}">
+    <view class="txtL">暂无订单</view>
+  </view>
+</view>
+

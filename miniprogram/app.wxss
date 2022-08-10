@@ -1,0 +1,53 @@
+/**app.wxss**/
+.container {
+  width: 90%;
+  margin: 0 auto;
+} 
+
+.mar{
+  height: 50rpx;
+}
+
+.halfmar{
+  height: 25rpx;
+}
+
+.botton1{
+  height: 20rpx;
+  width: 400rpx;
+  background-color: #92b57a;
+  padding: 30rpx;
+  margin: 20rpx auto;
+  color: white;
+  text-align: center;
+  line-height: 20rpx;
+  border-radius: 10rpx;
+}
+
+.choice{
+  height: 130rpx;
+  background-color: #f7efe2;
+  border-right: 8rpx solid #92b57a;
+  border-bottom: 8rpx solid #92b57a;
+  border-left: 20rpx solid #8bb171;
+  margin: 20rpx 0;
+  padding: 20rpx 20rpx 20rpx 30rpx;
+}
+
+.txtXL{
+  font-size: larger;
+  font-weight: bolder;
+  padding-bottom: 10rpx;
+}
+
+.txtL{
+  font-size: larger;
+  font-weight: normal;
+  padding-bottom: 20rpx;
+}
+
+.txtM{
+  font-size: medium;
+  font-weight: 300;
+  padding-top: 10rpx;
+}

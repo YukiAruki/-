@@ -1,0 +1,21 @@
+/* pages/manageO/manageO.wxss */
+.box{
+  height: 195rpx;
+  width: 100%;
+  background-color: white;
+  border-bottom: 2rpx solid #d8d8d8;
+  margin-top: 10rpx;
+}
+
+.innerbox{
+  height: 100rpx;
+  width: 85%;
+  line-height: 16rpx;
+  padding: 40rpx;
+  border-bottom: 2rpx solid #d8d8d8;
+  margin: 0 auto;
+}
+
+.button_r{
+  float: right;margin:auto;background-color: #92b57a;color: white; height:60rpx;line-height: 60rpx;border: 10rpx solid #92b57a;border-radius: 10rpx;
+}

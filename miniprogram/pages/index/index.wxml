@@ -1,0 +1,28 @@
+<!--pages/index/index.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <swiper-item wx:for="{{background}}" wx:key="*this">
+    <navigator url="{{item.src}}">
+      <image src="{{item.img}}" alt="" mode="widthFix"/>
+    </navigator>
+  </swiper-item>
+</swiper>
+<view class="container">
+  <!--button type="primary" bindtap="scan">扫二维码</button-->
+  <navigator class="botton1" url="../shop/dictionary/dictonary">查看详细商品</navigator>
+  <navigator class="botton1" url="../public/chooseL/chooseL?typ=1" wx:if="{{haveuserInfo == 1 && isBegin == 1}}">点击购买</navigator>
+  <view class="botton1" bindtap="showModal" wx:if="{{haveuserInfo == 0 && isBegin == 1}}">点击购买</view>
+  <!-- <view class="botton1" style="background-color: gray;" wx:if="{{isBegin == -1}}">未到购买时间</view> -->
+  <view class="tips">
+    <view class="tipHead">注意事项</view>
+    <view class="tipText">1.本盲盒一人一天仅可购买一次</view>
+    <view class="tipText">2.如果您是贫困生，可通过提前绑定贫困生身份，经过我们的人工审核与信息录入后，方可以更低的价格购入盲盒。信息核对过程中我们将对您的信息进行保密处理。</view>
+    <view class="tipText">3.务必在规定时间内领取，若超时未领取则账号将受到警告，警告次数达到x次用户将被加入黑名单，无法购买此产品</view>
+    <view class="mar"></view>
+  </view>
+  <view class="tips">
+    <view class="tipHead">购买流程</view>
+    <view class="tipText">1.购买时请填写正确的学号，取单时需出示学号对应的校园卡/学生证</view>
+    <view class="tipText">2.选择教超的地址，不同的教超内盲盒的余量不同，可以提前点击查看全部商品，作对比查看</view>
+    <view class="tipText">3.确认购买的盲盒种类后，凭借取单号，在规定时间内到达教超出示取单号进行盲盒的领取</view>
+  </view>
+</view>

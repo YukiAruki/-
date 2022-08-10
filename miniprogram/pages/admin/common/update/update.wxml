@@ -1,0 +1,16 @@
+<!--pages/update/update.wxml-->
+<view style="width: 95%; margin: auto;">
+  <van-toast id="van-toast" />
+  <view class="txtL">｜更新库存-教超名</view>
+  <view class="innerbox" wx:for="{{product}}">
+    <text>{{item.pname}}</text>
+    <view class="upd">
+      <text class="btn" data-id="{{item.pid}}" bindtap="minus">-</text>
+      <text class="btn" wx:if="{{!data[item.pid]}}">0</text>
+      <text class="btn" wx:if="{{data[item.pid]}}">{{data[item.pid]}}</text>
+      <text class="btn" data-id="{{item.pid}}" bindtap="plus">+</text>
+    </view>
+  </view>
+  <view class="halfmar"></view>
+  <view class="botton1" bindtap="confirm">更新库存</view>
+</view>

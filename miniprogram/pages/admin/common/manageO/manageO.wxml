@@ -1,0 +1,22 @@
+<!--pages/manageO/manageO.wxml-->
+<view style="width: 95%; margin: auto;">
+  <van-toast id='van-toast' />
+  <view class="txtL">｜订单管理 - {{orders[0].lname}}</view>
+  <view class="innerbox" wx:if="{{haveorder == false}}">
+    <view class="txtL">暂无订单</view>
+  </view>
+  <van-cell-group></van-cell-group>
+  <view class="innerbox" wx:if="{{haveorder == true && item.proc == '待提取'}}" wx:for="{{orders}}">
+    <view class="txtL" style="margin-bottom: 16rpx;">{{item.oid_form}} {{item.proc}}</view>
+    <view class="button_r" bindtap="dealOrder" data-oid="{{item.oid}}">完成订单</view>
+    <view class="txtL">{{item.cname}}</view>
+    <view class="txtM">{{item.date}}</view>
+  </view>
+  <view wx:if="{{item.proc == '已完成' && showAll == true}}" wx:for="{{orders}}" class="innerbox">
+    <view class="txtL" style="margin-bottom: 16rpx;">{{item.oid_form}} {{item.proc}}</view>
+    <view class="txtL">{{item.cname}}</view>
+    <view class="txtM">{{item.date}}</view>
+  </view>
+  <view wx:if="{{showAll == false}}" style="margin: auto;text-align: center;" bindtap="showAll">查看全部订单</view>
+  <view wx:if="{{showAll == true}}" style="margin: auto;text-align: center;" bindtap="cancelShow">已显示全部订单，点击收起</view>
+</view>

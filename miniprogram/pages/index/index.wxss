@@ -1,0 +1,29 @@
+/* pages/index/index.wxss */
+swiper {
+    height: 56vw;
+}
+
+swiper image{
+    width: 100vw;
+}
+
+.tips{
+    height: 700rpx;
+    width: 100%;
+    border-top: 20rpx solid #8bb171;
+    border-bottom: 40rpx solid white;
+    margin: 10rpx auto;
+    padding: 0px;
+    background-color: #f7efe2;
+    color: #184c46;
+}
+
+.tipText{
+    margin: 40rpx 40rpx 0 40rpx;
+}
+
+.tipHead{
+    margin: 40rpx;
+    text-align: center;
+    font-size: larger;
+}

@@ -1,0 +1,26 @@
+page{
+  background-color: #f1f1f1;
+}
+
+.headbox{
+  height:240rpx;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  margin-top: 30rpx;
+  margin-bottom: 25rpx;
+  border-bottom: 2rpx solid #d8d8d8;
+}
+
+.touxiang{
+  float: left;
+  background-color: grey;
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 100rpx;
+  margin: 45rpx 50rpx 0 50rpx;
+}
+
+.maintxt{
+  float: left;
+  margin-top: 60rpx;
+}

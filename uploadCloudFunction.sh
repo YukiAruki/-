@@ -1,0 +1,1 @@
+"/Applications/wechatwebdevtools.app/Contents/MacOS/cli" cloud functions deploy --e cloud1-1gx6rxola8f31bb6 --n quickstartFunctions --r --project "/Users/yukiaruki/Desktop/不会秃的/无余" --report_first --report

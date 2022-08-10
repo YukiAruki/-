@@ -1,0 +1,17 @@
+/* pages/manageI/manageI.wxss */
+.box{
+  height: 195rpx;
+  width: 100%;
+  background-color: white;
+  border-bottom: 2rpx solid #d8d8d8;
+  margin-top: 10rpx;
+}
+
+.innerbox{
+  height: 16rpx;
+  width: 85%;
+  line-height: 16rpx;
+  padding: 40rpx;
+  border-bottom: 2rpx solid #d8d8d8;
+  margin: 0 auto;
+}

@@ -1,0 +1,8 @@
+<!--pages/chooseL/chooseL.wxml-->
+<view class="container">
+  <view class="txtXL">点击选择教超</view>
+    <view bindtap="navigate" class="choice" wx:for="{{location}}" data-id="{{item.lid}}">
+      <view class="txtL">{{item.lname}}</view>
+      <view class="txtM">位置：{{item.detail}}</view>
+    </view>
+</view>

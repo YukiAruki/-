@@ -1,0 +1,14 @@
+<!--pages/chooseT/chooseT.wxml-->
+<!--view bindtap="getVal"></view-->
+<view class="container">
+  <view class="txtXL">点击选择盲盒种类</view>
+    <view bindtap="confirm" class="choice" wx:for="{{box}}" data-cid="{{item.cid}}">
+      <view class="txtL">{{item.cname}}</view>
+      <view class="txtM">{{item.detail}}　余量：{{item.cnt}}</view>
+    </view>
+    <!-- <modal hidden="{{hiddenmodalput}}" title="请输入您的学号" 
+   			confirm-text="提交" cancel-text="取消" bindcancel="modalinput" 
+   			bindconfirm="confirm">
+     <input type='text' placeholder="请输入内容" auto-focus bindinput="input"/>
+   </modal> -->
+</view>
