@@ -8,7 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    code:''
+    code:'',
+    code1:''
   },
 
   /**
@@ -20,6 +21,8 @@ Page({
 
   submit:function(){
     const code = this.data.code;
+    const code1 = this.data.code1;
+    console.log(code + code1);
     const openid = app.globalData.openid;
     wx.request({
       url: app.globalData.urlHead + '/wuyu/user/searchKey.php',
