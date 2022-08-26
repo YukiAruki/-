@@ -9,13 +9,15 @@
     <van-cell title="绑定贫困生" size="large"></van-cell>
     <van-cell title="我的订单" size="large" link-type="navigateTo" url="../user/order/order"></van-cell>
     <van-cell title="加入我们" size="large" link-type="navigateTo" url="../user/joinIn/joinIn"></van-cell>
+    <van-cell title="清空缓存" size="large" bindtap="clearInfo"></van-cell>
+    <van-cell title="常见问题" size="large" link-type="navigateTo" url="../user/userProblem/userProblem"></van-cell>
     <button wx:if="{{!isAdmin}}" open-type="contact" bindcontact="onReachBottom" class="bottombox" type="default">联系客服</button>
   </van-cell-group>
   <view class="halfmar"></view>
   <van-cell-group wx:if="{{isAdmin}}">
     <van-cell title="管理库存" size="large" link-type="navigateTo" url="../admin/common/manageI/manageI"></van-cell>
     <van-cell title="当前订单" size="large" link-type="navigateTo" url="../public/chooseL/chooseL?typ=2"></van-cell>
-    <!-- <van-cell wx:if="{{rt == 1}}" size="large" s title="全局开启（当前状态为{{isBegin}}）" bindtap="startSell"></van-cell> -->
+    <van-cell wx:if="{{rt == 1}}" size="large" s title="全局开启（当前状态为{{isBegin}}）" bindtap="startSell"></van-cell>
     <van-cell wx:if="{{rt == 1}}" size="large" s title="查看绑定密钥" link-type="navigateTo" url="../admin/rt/keyList/keyList"></van-cell>
     <van-cell wx:if="{{rt == 1}}" size="large" s title="查看现有管理员" link-type="navigateTo" url="../admin/rt/adminList/adminList"></van-cell>
   </van-cell-group>

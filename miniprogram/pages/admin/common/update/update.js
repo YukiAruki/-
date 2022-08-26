@@ -1,17 +1,15 @@
 // pages/update/update.js
 import Toast from "../../../../miniprogram_npm/vant-weapp/toast/toast"
 
-var data = [];
-var lid;
+let cntData = [];
+let lid;
 const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
-  data: {
-
-  },
+  cntData: [],
 
   /**
    * 生命周期函数--监听页面加载
@@ -22,11 +20,20 @@ Page({
     // 获取所有产品
     wx.request({
       url: app.globalData.urlHead + '/wuyu/admin/common/getProduct.php',
+      data:{
+        lid: lid
+      },
       success: function (res) {
         console.log(res)
         if (res.data.length) {
+          let i = 0;
+          while(res.data[i]){
+            cntData[res.data[i].pid] = res.data[i].cnt;
+            i++;
+          }
           that.setData({
-            product: res.data
+            product: res.data,
+            data: cntData
           })
         } else {
           Toast.fail('获取当前库存失败！')
@@ -36,26 +43,20 @@ Page({
   },
 
   plus: function (e) {
-    var id = e.currentTarget.dataset.id;
-    if (data[id]) {
-      data[id]++;
-    } else {
-      data[id] = 1;
-    }
+    let id = e.currentTarget.dataset.id;
+    cntData[id]++;
     this.setData({
-      data: data
+      data: cntData
     })
   },
 
   minus: function (e) {
     var id = e.currentTarget.dataset.id;
-    if (data[id]) {
-      data[id]--;
-    } else {
-      data[id] = -1;
+    if (cntData[id] > 0) {
+      cntData[id]--;
     }
     this.setData({
-      data: data
+      data: cntData
     })
   },
 
@@ -64,7 +65,7 @@ Page({
     wx.request({
       url: app.globalData.urlHead + '/wuyu/admin/common/updateInv.php',
       data: {
-        data: data,
+        data: cntData,
         lid: lid
       },
       success: function (res) {

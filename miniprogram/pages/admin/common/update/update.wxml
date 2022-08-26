@@ -6,11 +6,11 @@
     <text>{{item.pname}}</text>
     <view class="upd">
       <text class="btn" data-id="{{item.pid}}" bindtap="minus">-</text>
-      <text class="btn" wx:if="{{!data[item.pid]}}">0</text>
-      <text class="btn" wx:if="{{data[item.pid]}}">{{data[item.pid]}}</text>
+      <text class="btn">{{data[item.pid]}}</text>
       <text class="btn" data-id="{{item.pid}}" bindtap="plus">+</text>
     </view>
   </view>
   <view class="halfmar"></view>
+  <view>{{data}}</view>
   <view class="botton1" bindtap="confirm">更新库存</view>
 </view>

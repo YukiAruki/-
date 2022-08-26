@@ -15,7 +15,8 @@
     "pages/admin/common/newP/newP",
     "pages/admin/rt/keyList/keyList",
     "pages/admin/rt/adminList/adminList",
-    "pages/user/joinIn/joinIn"
+    "pages/user/joinIn/joinIn",
+    "pages/user/userProblem/userProblem"
   ],
   "window": {
     "backgroundTextStyle": "light",

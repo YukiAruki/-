@@ -1,7 +1,6 @@
 <!--pages/joinIn/joinIn.wxml-->
 <van-cell-group>
   <van-field model:value="{{code}}" label="认证码" placeholder="请输入认证码" />
-  <van-field value="{{code1}}" label="认证码" placeholder="请输入认证码" />
 </van-cell-group>
 <view class="halfmar"></view>
 <van-toast id="van-toast" />
