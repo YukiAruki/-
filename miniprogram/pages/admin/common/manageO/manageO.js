@@ -17,7 +17,7 @@ Page({
    */
   onLoad: function (options) {
     const that = this;
-    var lid;
+    let lid;
     if(wx.getStorageSync('lid_m') == ''){
       lid = options.lid;
     } else {
@@ -31,9 +31,12 @@ Page({
       success:function(res){
         wx.setStorageSync('lid_m', lid);
         if(res.data.cnt != 0){
+          let sortedData = res.data.sort(function (a, b) {
+            return (b.oid - a.oid)
+          })
           that.setData({
             haveorder:true,
-            orders: res.data
+            orders: sortedData
           });
         } else if(res.data.code != 200){
           Toast.fail('获取数据失败')

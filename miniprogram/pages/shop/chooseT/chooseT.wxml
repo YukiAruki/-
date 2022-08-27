@@ -2,10 +2,16 @@
 <!--view bindtap="getVal"></view-->
 <view class="container">
   <view class="txtXL">点击选择盲盒种类</view>
-    <view bindtap="confirm" class="choice" wx:for="{{box}}" data-cid="{{item.cid}}">
+  <view  wx:for="{{box}}" >
+    <view bindtap="confirm" class="choice" data-cid="{{item.cid}}" wx:if="{{item.cnt != 0}}">
       <view class="txtL">{{item.cname}}</view>
       <view class="txtM">{{item.detail}}　余量：{{item.cnt}}</view>
     </view>
+    <view class="choice" data-cid="{{item.cid}}"  wx:if="{{item.cnt == 0}}">
+      <view class="txtL" style="color:gray;">{{item.cname}}（售完）</view>
+      <view class="txtM" style="color:gray;">{{item.detail}}　余量：{{item.cnt}}</view>
+    </view>
+  </view>
     <!-- <modal hidden="{{hiddenmodalput}}" title="请输入您的学号" 
    			confirm-text="提交" cancel-text="取消" bindcancel="modalinput" 
    			bindconfirm="confirm">

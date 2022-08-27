@@ -10,19 +10,7 @@ Page({
     autoplay: true,
     interval: 4000,
     duration: 500,
-    background: [{
-        img: '../../images/banner.jpg',
-        src: '#'
-      },
-      {
-        img: '../../images/banner.jpg',
-        src: '#'
-      },
-      {
-        img: '../../images/banner.jpg',
-        src: '#'
-      }
-    ]
+    background: [{}]
   },
 
   onLoad: function (options) {
@@ -39,14 +27,15 @@ Page({
     wx.request({
       url: app.globalData.urlHead + '/wuyu/setup/getStartData.php',
       success(res) {
-        app.globalData.isBegin = res.data.isBegin
+        app.globalData.isBegin = res.data.isbegin
         that.setData({
-          isBegin: res.data.isBegin,
+          isBegin: res.data.isbegin,
           background: res.data[0].bannerList,
           haveuserInfo: haveuserInfo
         })
       }
     })
+
   },
 
   showModal: function () {

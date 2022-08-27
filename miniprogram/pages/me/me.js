@@ -51,7 +51,7 @@ Page({
         hasUserInfo: app.globalData.isUser,
         userInfo: app.globalData.userInfo,
         rt: app.globalData.rt,
-        isBegin: app.globalData.isBegin
+        isBegin: app.globalData.isBegin == 1?true : false
       });
     }
   },

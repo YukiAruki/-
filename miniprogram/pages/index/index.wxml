@@ -11,7 +11,7 @@
   <navigator class="botton1" url="../shop/dictionary/dictonary">查看详细商品</navigator>
   <navigator class="botton1" url="../public/chooseL/chooseL?typ=1" wx:if="{{haveuserInfo == 1 && isBegin == 1}}">点击购买</navigator>
   <view class="botton1" bindtap="showModal" wx:if="{{haveuserInfo == 0 && isBegin == 1}}">点击购买</view>
-  <!-- <view class="botton1" style="background-color: gray;" wx:if="{{isBegin == -1}}">未到购买时间</view> -->
+  <view class="botton1" style="background-color: gray;" wx:if="{{isBegin == -1}}">未到购买时间</view>
   <view class="tips">
     <view class="tipHead">注意事项</view>
     <view class="tipText">1.本盲盒一人一天仅可购买一次</view>

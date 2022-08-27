@@ -11,6 +11,5 @@
     </view>
   </view>
   <view class="halfmar"></view>
-  <view>{{data}}</view>
   <view class="botton1" bindtap="confirm">更新库存</view>
 </view>
