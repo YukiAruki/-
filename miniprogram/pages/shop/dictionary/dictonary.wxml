@@ -14,5 +14,5 @@
       <view class="mar"></view>
   </view>
   <view class="halfmar"></view>
-  <navigator class="botton1" url="../../public/chooseL/chooseL?typ=1">点击购买</navigator>
+  <navigator open-type="redirect" class="botton1" url="../../public/chooseL/chooseL?typ=1">点击购买</navigator>
 </view>
