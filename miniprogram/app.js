@@ -10,7 +10,7 @@ App({
       avatarUrl: 'default',
       nickName: ''
     },
-    urlHead: 'http://localhost:8080'
+    urlHead: 'https://example.com'
   },
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
@@ -27,6 +27,7 @@ App({
     that.globalData.openid = wx.getStorageSync('openid');
     // 缓存内无openid
     if (that.globalData.openid == '') {
+      console.log('缓存内无openid')
       waitTime = 4000;
       let p = new Promise(function (resolve, reject) {
         wx.login({
@@ -56,6 +57,7 @@ App({
               wx.hideLoading()
               return Promise.resolve(response.data.openid);
             } else {
+              console.log('获取openid失败');
               return Promise.reject('获取openid失败');
             }
           }
@@ -100,6 +102,7 @@ App({
         that.globalData.userInfo.avatarUrl = wx.getStorageSync('avatarUrl');
         that.globalData.userInfo.nickName = wx.getStorageSync('nickName');
         that.globalData.rt = wx.getStorageSync('rt');
+        console.log(that.globalData)
       }
     }, waitTime)
 

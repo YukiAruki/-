@@ -6,8 +6,8 @@
       <view wx:for="{{item.invt}}" wx:for-item="invt">
         <view class="box" >{{invt.type}}</view>
         <view wx:for="{{invt.detail}}" wx:for-item="dt"> 
-          <view class="innerbox" >{{dt[0]}}
-           <view class="cnt">{{dt[1]}}</view>
+          <view class="innerbox" >{{dt[1]}}
+           <view class="cnt">{{dt[0]}}</view>
           </view>
         </view>
       </view>

@@ -19,22 +19,23 @@ Page({
 
     // 检测用户状态
     let haveuserInfo = 0;
-    if (app.globalData.isUser == 1) {
-      haveuserInfo = 1;
-    }
-
-    // 获取页面内容getStartData.php
-    wx.request({
-      url: app.globalData.urlHead + '/wuyu/setup/getStartData.php',
-      success(res) {
-        app.globalData.isBegin = res.data.isbegin
-        that.setData({
-          isBegin: res.data.isbegin,
-          background: res.data[0].bannerList,
-          haveuserInfo: haveuserInfo
-        })
+    setTimeout(function () {
+      if (app.globalData.isUser == 1) {
+        haveuserInfo = 1;
       }
-    })
+      // 获取页面内容getStartData.php
+      wx.request({
+        url: app.globalData.urlHead + '/wuyu/setup/getStartData.php',
+        success(res) {
+          app.globalData.isBegin = res.data.isbegin
+          that.setData({
+            isBegin: res.data.isbegin,
+            background: res.data[0].bannerList,
+            haveuserInfo: haveuserInfo
+          })
+        }
+      })
+    }, 2000);
 
   },
 
